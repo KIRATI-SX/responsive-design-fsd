@@ -1,3 +1,4 @@
+
 * {
   padding: 0;
   margin: 0;
@@ -10,6 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 100vw;
   width: 100vw;
   height: 20vh;
   margin-top: 5vh;
@@ -27,15 +29,15 @@ h1 {
     transparent 50%,
     #ff8345,
     hsla(20, 100%, 64%, 1)
-  );
-}
-
-h2 {
-  font-weight: 600;
-  font-size: 1.25rem;
-  letter-spacing: 0.2px;
-  color: #183b56;
-  position: absolute;
+    );
+  }
+  
+  h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 0.2px;
+    color: #183b56;
+    position: absolute;
   top: 170px;
   left: 30px;
 }
@@ -63,10 +65,11 @@ h3 {
 }
 
 .categories {
-  max-width: 1900px;
-  min-width: 450px;
+  max-width: 100vw;
+  min-width: 100vh;
   width: 100vw;
   height: 50vh;
+
 }
 
 .row-1,
@@ -74,6 +77,8 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .job-item,
@@ -168,3 +173,45 @@ h3 {
 }
 
 /* Start coding here */
+@media only screen and (max-width: 600px) {
+  .topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    margin-top: 31px;
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: unset;
+    height: auto;
+    width: 100vw;
+    margin-top: 30px;
+    gap: 24px;
+    margin-bottom: 80px;
+  }
+
+  .row-1,
+  .row-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .job-item,
+  .job-more {
+    /* margin: 20px 0; */
+    margin: 0px;
+    width: 333px;
+  }
+
+}
